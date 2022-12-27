@@ -9,8 +9,8 @@
         <li><a href="/projects.php">Projects</a></li>
     </ul>
 
-    <a href="https://github.com/Tublanx" class="navbar_items">
-        <li><i class="fab fa-github"></i></li>
+    <!-- empty section -->
+    <a href="" class="navbar_items">
     </a>
 
     <a href="" class="navbar_toggleBtn">
