@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     font-family: 'Open sans';
 }
 
@@ -34,7 +34,7 @@ a {
 .navbar_menu {
     display: flex;
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .navbar_menu li {
@@ -50,7 +50,7 @@ a {
     list-style: none;
     color: white;
     display: flex;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .navbar_items li {
