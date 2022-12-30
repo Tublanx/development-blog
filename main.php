@@ -14,10 +14,6 @@
     <title>Become a real Developer</title>
 
     <style>
-        body {
-            background-color: #263343;
-        }
-
         header {
             animation: fadein 3s;
             -moz-animation: fadein 3s;
