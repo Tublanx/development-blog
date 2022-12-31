@@ -1,6 +1,16 @@
 <?php
-$mysqli = mysqli_connect("localhost", "root", "1234", "blog");
-$result = mysqli_query($mysqli, "select * from post");
+$mysqli_host = "localhost";
+$mysqli_user = "root";
+$mysqli_password = "1234";
+$mysqli_db = "blog";
+
+$conn = mysqli_connect($mysqli_host, $mysqli_user, $mysqli_password, $mysqli_db);
+
+if (!$conn) {
+    die("연결 실패: " . mysqli_connect_error());
+}
+
+$result = mysqli_query($conn, "select * from project");
 ?>
 
 <!DOCTYPE html>
@@ -17,32 +27,34 @@ $result = mysqli_query($mysqli, "select * from post");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/header_style.css">
     <title>Projects</title>
+
+    <style>
+        .btn {
+            color: #FFF;
+            border-radius: 5px;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    </style>
+
 </head>
 
 <body>
     <?php include('header.php') ?>
     <div class="container">
-        <div class="row-fluid ">
-            <!-- my php code which uses x-path to get results from xml query. -->
+        <div class="row ml-5">
             <?php while ($row = $result->fetch_assoc()) { ?>
-                <div class="col-sm-4 ">
-                    <div class="card-columns-fluid">
-                        <div class="card  bg-light" style="width: 22rem; ">
-                            <!-- <img class="card-img-top" src=" <?#php echo $elements->pictures->picture[2]->filename; ?> " alt="Card image cap"> -->
-
-                            <div class="card-body">
-                                <h5 class="card-title"><b><?php echo $row["title"] ?></b></h5>
-                                <p class="card-text"><b><?php echo $row["content"] ?></b></p>
-                                <p class="card-text"><?php echo $row["createdDate"] ?></p>
-                                <a href="#" class="btn btn-secondary">Full Details</a>
-                            </div>
-                        </div>
+                <div class="card m-2" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $row["title"] ?></h5>
+                        <p class="card-text"><?php echo $row["content"] ?></p>
+                        <a href="<?php echo $row["url"] ?>" class="btn btn-primary">See detail</a>
                     </div>
                 </div>
             <?php } ?>
         </div>
     </div>
-    <!--container div  -->
 </body>
 
 </html>
