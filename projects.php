@@ -30,7 +30,6 @@ $result = mysqli_query($conn, "select * from project");
 
     <style>
         .btn {
-            color: #FFF;
             border-radius: 5px;
             font-family: "Lucida Console", Monaco, monospace;
             font-size: 14px;
