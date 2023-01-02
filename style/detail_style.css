@@ -1,0 +1,22 @@
+.post-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.post-subtitle {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.post-meta {
+    color: lightblue;
+}
+
+hr {
+    background-color: lightgray;
+}
+
+.markdown-content {
+    color: white;
+}
