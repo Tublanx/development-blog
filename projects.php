@@ -1,16 +1,7 @@
 <?php
-$mysqli_host = "localhost";
-$mysqli_user = "root";
-$mysqli_password = "1234";
-$mysqli_db = "blog";
+include('db_connect.php');
 
-$conn = mysqli_connect($mysqli_host, $mysqli_user, $mysqli_password, $mysqli_db);
-
-if (!$conn) {
-    die("연결 실패: " . mysqli_connect_error());
-}
-
-$result = mysqli_query($conn, "select * from project");
+$result = $pdo -> query("select * from project");
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +34,7 @@ $result = mysqli_query($conn, "select * from project");
     <?php include('header.php') ?>
     <div class="container">
         <div class="row ml-5">
-            <?php while ($row = $result->fetch_assoc()) { ?>
+            <?php while ($row = $result->fetch()) { ?>
                 <div class="card m-2" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row["title"] ?></h5>
