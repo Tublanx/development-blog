@@ -19,7 +19,7 @@ $result = $pdo->query("select * from post");
     <link rel="stylesheet" href="/style/header_style.css">
     <link rel="stylesheet" href="/style/blog_style.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <title>Blog</title>
+    <title>become a s/w developer...</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@ $result = $pdo->query("select * from post");
                 <?php while ($row = $result->fetch()) { ?>
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="detail.php?id=<?php echo $row["id"] ?>">
                             <h2 class="post-title"><?php echo $row["title"] ?></h2>
                             <h3 class="post-subtitle"><?php echo $row["subtitle"] ?></h3>
                         </a>
