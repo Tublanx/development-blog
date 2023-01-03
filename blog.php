@@ -1,7 +1,6 @@
 <?php
-include('db_connect.php');
-
-$result = $pdo->query("select * from post");
+$dir = 'post';
+$scanned_dir = array_diff(scandir($dir), array('.', '..'));
 ?>
 
 <!DOCTYPE html>
@@ -27,18 +26,17 @@ $result = $pdo->query("select * from post");
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <?php while ($row = $result->fetch()) { ?>
+                <?php for ($i = 0; $i < count($scanned_dir); $i = $i + 1) { ?>
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="detail.php?id=<?php echo $row["id"] ?>">
-                            <h2 class="post-title"><?php echo $row["title"] ?></h2>
-                            <h3 class="post-subtitle"><?php echo $row["subtitle"] ?></h3>
+                        <a href="detail.php?id=<?= str_replace(".md", "", $scanned_dir[$i + 2]) ?>">
+                            <h2 class="post-title"><?= str_replace(".md", "", $scanned_dir[$i + 2]) ?></h2>
                         </a>
                         <p class="post-meta">
                             Posted by 이기현 on
                             <?php
-                            $week = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-                            echo $week[date('w', strtotime($row["createdDate"]))] . " " . date("d Y", strtotime($row["createdDate"]))
+                            $date = str_replace(".md", "", explode("_", $scanned_dir[$i + 2]));
+                            echo $date[2];
                             ?>
                         </p>
                     </div>
