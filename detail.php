@@ -40,9 +40,9 @@ $content = \Michelf\Markdown::defaultTransform($markdown_file);
                     <p class="post-meta">
                         Posted by 이기현 on
                         <?php
-                            $date = str_replace(".md", "", explode("_", $id));
-                            echo $date[2];
-                            ?>
+                        $date = str_replace(".md", "", explode("_", $id));
+                        echo $date[2];
+                        ?>
                     </p>
                 </div>
                 <!-- Divider-->
