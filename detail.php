@@ -2,13 +2,10 @@
 
 require_once 'Michelf/Markdown.inc.php';
 
-include('db_connect.php');
-
 $id = $_GET['id'];
-$query = $pdo->query("select * from post where id='$id';");
-$row = $query->fetch();
+echo $id;
 
-$markdown_file = file_get_contents("post/test_$id.md");
+$markdown_file = file_get_contents("post/$id.md");
 $content = \Michelf\Markdown::defaultTransform($markdown_file);
 ?>
 
@@ -27,7 +24,7 @@ $content = \Michelf\Markdown::defaultTransform($markdown_file);
     <link rel="stylesheet" href="/style/header_style.css">
     <link rel="stylesheet" href="/style/detail_style.css">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <title><?php echo $row["title"] ?></title>
+    <title><?= $id ?></title>
 </head>
 
 <body>
@@ -38,15 +35,14 @@ $content = \Michelf\Markdown::defaultTransform($markdown_file);
                 <!-- Post preview-->
                 <div class="post-preview">
                     <div class="bg">
-                        <h2 class="post-title"><?php echo $row["title"] ?></h2>
-                        <h3 class="post-subtitle"><?php echo $row["subtitle"] ?></h3>
+                        <h2 class="post-title"><?php echo $id ?></h2>
                     </div>
                     <p class="post-meta">
                         Posted by 이기현 on
                         <?php
-                        $week = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-                        echo $week[date('w', strtotime($row["createdDate"]))] . " " . date("d Y", strtotime($row["createdDate"]))
-                        ?>
+                            $date = str_replace(".md", "", explode("_", $id));
+                            echo $date[2];
+                            ?>
                     </p>
                 </div>
                 <!-- Divider-->
@@ -58,7 +54,7 @@ $content = \Michelf\Markdown::defaultTransform($markdown_file);
     <div class="markdown-content container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <?php echo $content ?>
+                <?= $content ?>
             </div>
         </div>
     </div>
