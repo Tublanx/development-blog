@@ -1,0 +1,18 @@
+.masthead {
+    background-color: rgb(26, 188, 156);
+}
+
+.masthead-avatar {
+    margin-top: 10%;
+    border-radius: 50%;
+}
+
+.masthead-heading {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.masthead-subheading {
+    margin-bottom: 10%;
+    font-size: 2rem;
+}
