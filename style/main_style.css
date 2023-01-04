@@ -5,6 +5,7 @@
 .masthead-avatar {
     margin-top: 10%;
     border-radius: 50%;
+    border: 3px solid black;
 }
 
 .masthead-heading {
