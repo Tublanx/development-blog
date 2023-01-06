@@ -29,6 +29,7 @@
             <p class="masthead-subheading font-weight-light">Backend Developer</p>
         </div>
     </header>
+    <hr>
     <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
@@ -57,6 +58,21 @@
             </div>
         </div>
     </section>
+    <hr>
+    <!-- About Section-->
+    <section class="about-page page-section text-white text-center" id="about">
+        <div class="container d-flex flex-column">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+            <br>
+            <!-- About Section Content-->
+            <p class="lead">안녕하세요 한국주택금융공사에서 재직중인 백엔드 개발자 이기현입니다. 현재 회사에서는 직접적인 개발을 주 업무로 두고 있지 않고, EDMS와 서고관리를 전문적으로 하고 있습니다. 개발언어는 JAVA, PHP를 주 언어로 두고 있습니다.</p>
+        </div>
+    </section>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; Development Site 2023</small></div>
+    </div>
 </body>
 
 </html>
