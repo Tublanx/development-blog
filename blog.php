@@ -30,7 +30,7 @@ $scanned_dir = array_diff(scandir($dir), array('.', '..'));
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a href="detail.php?id=<?= str_replace(".md", "", $scanned_dir[$i + 2]) ?>">
-                            <h2 class="post-title"><?= str_replace(".md", "", $scanned_dir[$i + 2]) ?></h2>
+                            <h2 class="post-title"><?= str_replace(".md", "", explode("_", $scanned_dir[$i + 2]))[0] ?></h2>
                         </a>
                         <p class="post-meta">
                             Posted by 이기현 on
