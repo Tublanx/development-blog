@@ -35,7 +35,7 @@ $content = \Michelf\Markdown::defaultTransform($markdown_file);
                 <!-- Post preview-->
                 <div class="post-preview">
                     <div class="bg">
-                        <h2 class="post-title"><?php echo $id ?></h2>
+                        <h2 class="post-title"><?= str_replace(".md", "", explode("_", $id))[0] ?></h2>
                     </div>
                     <p class="post-meta">
                         Posted by 이기현 on
