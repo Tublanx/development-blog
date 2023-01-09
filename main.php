@@ -30,29 +30,53 @@
         </div>
     </header>
     <hr>
-    <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white mb-5">Skills</h2>
-            <!-- Portfolio Grid Items-->
-            <div class="row justify-content-center">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                        <img class="img" width="350px" height="250px" src="img/java.png" alt="java" />
+    <section class="py-5 py-xl-6">
+        <div class="container mb-5 mb-md-6">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center">
+                    <h2 class="masthead-heading mb-4 display-5 text-white">Skills</h2>
+                    <p class="text-secondary mb-4 mb-md-5">주력 언어는 JAVA이고 서브 언어로는 PHP와 C#입니다.</p>
+                    <hr class="w-50 mx-auto mb-0 text-secondary">
+                </div>
+            </div>
+        </div>
+
+        <div class="container overflow-hidden">
+            <div class="row justify-content-xl-center gy-3 gy-sm-4">
+                <div class="skill col-12 col-sm-6 col-xl-5">
+                    <div class="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
+                        <h3 class="fw-bold mb-2">JAVA</h3>
+                        <p class="text-secondary fst-italic mb-4">Mainly developing using Spring Framework and Spring Boot.</p>
+                        <div class="progress">
+                            <div class="progress-bar w-100 progress-bar-striped progress-bar-animated" role="progressbar" aria-label="JAVA" aria-valuenow="100" aria-valuemin="0" aria-valuemax="50">100%</div>
+                        </div>
                     </div>
                 </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                        <img class="img" width="350px" height="250px" src="img/php.png" alt="php" />
+                <div class="skill col-12 col-sm-6 col-xl-5">
+                    <div class="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
+                        <h3 class="fw-bold mb-2">PHP</h3>
+                        <p class="text-secondary fst-italic mb-4">This site is also developed using PHP. I will study Laravel later.</p>
+                        <div class="progress">
+                            <div class="progress-bar w-75 progress-bar-striped progress-bar-animated" role="progressbar" aria-label="PHP" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
                     </div>
                 </div>
-                <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                        <img class="img" width="350px" height="250px" src="img/mysql.png" alt="mysql" />
+                <div class="skill col-12 col-sm-6 col-xl-5">
+                    <div class="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
+                        <h3 class="fw-bold mb-2">MySQL</h3>
+                        <p class="text-secondary fst-italic mb-4">I use MySQL primarily for database management. Additionally, we use Oracle, Tibero, etc.</p>
+                        <div class="progress">
+                            <div class="progress-bar w-100 progress-bar-striped progress-bar-animated" role="progressbar" aria-label="MySQL" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill col-12 col-sm-6 col-xl-5">
+                    <div class="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
+                        <h3 class="fw-bold mb-2">C#</h3>
+                        <p class="text-secondary fst-italic mb-4">It's not the main language, but it's a language that I'm constantly studying.</p>
+                        <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%;" role="progressbar" aria-label="MySQL" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,6 +84,7 @@
     </section>
     <hr>
     <!-- About Section-->
+
     <section class="about-page page-section text-white text-center" id="about">
         <div class="container d-flex flex-column">
             <!-- About Section Heading-->
