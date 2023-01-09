@@ -1,7 +1,6 @@
 <?php
-include('db_connect.php');
-
-$result = $pdo -> query("select * from project");
+$dir = "project";
+$scanned_dir = array_diff(scandir($dir), array('.', '..'));
 ?>
 
 <!DOCTYPE html>
@@ -34,12 +33,21 @@ $result = $pdo -> query("select * from project");
     <?php include('header.php') ?>
     <div class="container">
         <div class="row ml-5">
-            <?php while ($row = $result->fetch()) { ?>
+            <?php for ($i = 0; $i < count($scanned_dir); $i = $i + 1) {
+                $fd = fopen("project/" . $scanned_dir[$i + 2], "r") or die("file is not exists");
+                while (!feof($fd)) {
+                    $dataLine = fgets($fd, 10000);
+                    $arr[] = $dataLine;
+                }
+                $title = $arr[0];
+                $desc = $arr[1];
+                $url = $arr[2];
+            ?>
                 <div class="card m-2" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $row["title"] ?></h5>
-                        <p class="card-text"><?php echo $row["content"] ?></p>
-                        <a href="<?php echo $row["url"] ?>" class="btn btn-primary">See detail</a>
+                        <h5 class="card-title"><?= $title ?></h5>
+                        <p class="card-text"><?= $desc ?></p>
+                        <a href="<?= $url ?>" class="btn btn-primary">See detail</a>
                     </div>
                 </div>
             <?php } ?>
