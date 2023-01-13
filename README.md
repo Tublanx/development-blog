@@ -8,3 +8,10 @@
 
 ## Installation
 Zip 파일 다운로드 혹은 fork, clone 방식을 통해서 vscode나 phpstorm같은 IDE에서 열어서 편집 및 서버 구동을 하실 수 있습니다.<br>
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
